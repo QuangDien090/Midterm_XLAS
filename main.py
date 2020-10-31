@@ -115,6 +115,8 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.iframe_new_3.clear()
         self.labelAfter.clear()
         self.iframe_new.clear()
+        self.iframe_old.clear()
+
 
 
     def ShowImageGray(self, image, label):
@@ -259,27 +261,6 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         plt.title('Magnitude Spectrum'), plt.xticks([]), plt.yticks([])
         plt.show()
 
-    '''def Display(self):
-        self.labelAfter.setText('AFTER APPLY FILTER')
-        self.szFilter = self.boxFilter.value()
-        img = copy.copy(self.Gray)
-        fig = plt.figure()
-        ax = fig.gca(projection='3d')
-
-        x = np.arange(-5, 5, 0.25)
-        y = np.arange(-5, 5, 0.25)
-        x, y = np.meshgrid(x, y)
-        r = np.sqrt(x ** 2 + y ** 2)
-        z = np.sin(r)
-
-        surf = ax.plot_wireframe(x, y, z, color='blue', linewidth=0.8)
-
-        ax.set_zlim(-1.01, 1.01)
-        ax.zaxis.set_major_locator(LinearLocator(10))
-        ax.zaxis.set_major_formatter(FormatStrFormatter('$.02f'))
-
-        fig.colorbar(surf, shrink=0.5, aspect=5)
-        plt.show()'''
 
     def Directional(self):
         self.labelAfter.setText('Image 1')
